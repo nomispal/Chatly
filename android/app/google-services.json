@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "631914466411",
+    "project_id": "drassistant-d7b5f",
+    "storage_bucket": "drassistant-d7b5f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:631914466411:android:c57320426a5779fdb2f52e",
+        "android_client_info": {
+          "package_name": "com.example.drassistant"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHEqb6yfm_Qv5OUpU8HCIvvYyKCrtfvE4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

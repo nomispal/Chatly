@@ -1,3 +1,4 @@
+import 'package:drassistant/auth/auth_service.dart';
 import 'package:drassistant/components/my_button.dart';
 import 'package:drassistant/components/my_textfield.dart';
 import 'package:flutter/cupertino.dart';
@@ -14,7 +15,20 @@ class LoginPage extends StatelessWidget {
   LoginPage({super.key, this.onTap});
 
   //login
-  void Login(){
+  void Login(BuildContext context) async{
+    // auth service
+    final authService = AuthService();
+    try{
+      await authService.signInWithEmailPassword(
+          _emailController.text, _passController.text);
+    } catch(e){
+      showDialog(
+          context: context,
+          builder:(context)=> AlertDialog(
+            title: Text(e.toString()),
+          )
+      );
+    }
 
   }
 
@@ -54,7 +68,9 @@ class LoginPage extends StatelessWidget {
             ),
             const SizedBox(height: 25,),
             //login button
-            MyButton(text: "Login",onTap: Login,),
+            MyButton(
+              text: "Login"
+              ,onTap:()=>Login(context),),
             const SizedBox(height: 25,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

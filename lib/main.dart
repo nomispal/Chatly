@@ -1,3 +1,4 @@
+import 'package:drassistant/auth/auth_gate.dart';
 import 'package:drassistant/auth/login_or_register.dart';
 import 'package:drassistant/firebase_options.dart';
 import 'package:drassistant/themes/light_theme.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginOrRegister(),
+      home: AuthGate(),
       theme: lightmode,
     );
   }

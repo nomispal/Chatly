@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../pages/settings_page.dart';
+
 class MyDrawer extends StatelessWidget{
   const MyDrawer({super.key});
 
@@ -36,25 +38,16 @@ class MyDrawer extends StatelessWidget{
               Padding(
                 padding: const EdgeInsets.only(left: 25.0),
                 child: ListTile(
-                  title: Text("M E S S A G E S"),
-                  leading: Icon(Icons.home),
-                  onTap: (){},
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 25.0),
-                child: ListTile(
-                  title: Text("P R E S C R I P T I O N S"),
-                  leading: Icon(Icons.home),
-                  onTap: (){},
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 25.0),
-                child: ListTile(
                   title: Text("S E T T I N G S"),
                   leading: Icon(Icons.settings),
-                  onTap: (){},
+                  onTap: (){
+                    Navigator.pop(context);
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context)=>SettingsPage(),
+                        )
+                    );
+                  },
                 ),
               ),
             ],

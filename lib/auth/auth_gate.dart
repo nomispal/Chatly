@@ -1,4 +1,5 @@
 import 'package:drassistant/auth/login_or_register.dart';
+import 'package:drassistant/pages/home_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

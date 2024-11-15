@@ -1,4 +1,5 @@
 import 'package:drassistant/auth/auth_service.dart';
+import 'package:drassistant/components/my_drawer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +19,7 @@ class HomePage extends StatelessWidget {
           IconButton(onPressed: logout, icon: Icon(Icons.logout))
         ],
       ),
+    drawer: MyDrawer(),
     );
   }
 

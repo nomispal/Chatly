@@ -16,27 +16,8 @@ class HomePage extends StatelessWidget {
         title: Text("HOME"),
       ),
     drawer: MyDrawer(),
-      body: _buildUserList(),
+      body: ,
     );
   }
-
-  Widget _buildUserList(){
-    return StreamBuilder(
-        stream: _chatService.getUserStream(),
-        builder: (context,snapshot){
-          //error
-    if(snapshot.hasError){
-      return const Text("Error");
-    }
-    if(snapshot.connectionState==ConnectionState.waiting){
-      return const Text("loading..");
-    }
-    return ListView(
-    children:
-      snapshot.data!.map<Widget>((userData)=>_buildUserListItem).toList(),
-    );
-    });
-  }
-  Widget <_buildUserListItem>{}
 
 }

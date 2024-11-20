@@ -41,7 +41,7 @@ class LoginPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             //logo
-            Image(image: AssetImage("assets/voice.png"),),
+            Icon(Icons.favorite,size: 88,),
             const SizedBox(height: 50,),
             //welcome back message
             Text(

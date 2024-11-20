@@ -15,14 +15,13 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
 
+      appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Theme.of(context).colorScheme.primary,
-        title: Center(
-          child: Text("HOME",
-              style: TextStyle(color: Colors.white),
-              ),
-        ),
+        title: Text("HOME",
+            style: TextStyle(color: Colors.white),
+            ),
       ),
     drawer: MyDrawer(),
       body: _buildUserList(),

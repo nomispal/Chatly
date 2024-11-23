@@ -24,6 +24,7 @@ class UserTile extends StatelessWidget {
              SizedBox(width: 25,),
              // user name
              Text(text),
+
            ],
          ),
        ),

@@ -28,12 +28,13 @@ class ChatService {
 
     // create a new message
      Message newMessage = Message(
-         senderID: currentUserEmail,
-         senderEmail: currentUserID,
-         recevierID: receiverID,
-         timestamp: timestamp,
+       senderID: currentUserID,
+       senderEmail: currentUserEmail,
+       recevierID: receiverID,
+       timestamp: timestamp,
        message: message,
      );
+
 
      // construct chat room ID for the two Users (sorted  to ensure  uniqueness)
      List<String> ids = [currentUserID,receiverID];

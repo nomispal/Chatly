@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/cupertino.dart';
 
-class Message{
+class Message {
   final String senderID;
   final String senderEmail;
   final String recevierID;
@@ -16,15 +15,13 @@ class Message{
     required this.timestamp,
   });
 
-
-  // convert to a map
-  Map<String, dynamic> toMap(){
+  Map<String, dynamic> toMap() {
     return {
-      'senderID':senderID,
-    'senderEmail':senderEmail,
-    'receiverID':recevierID,
-    'receiverEmail':message,
-  };
+      'senderID': senderID,
+      'senderEmail': senderEmail,
+      'receiverID': recevierID,
+      'message': message,
+      'timestamp': timestamp,
+    };
   }
-
 }

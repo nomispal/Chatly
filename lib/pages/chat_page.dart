@@ -74,24 +74,53 @@ class ChatPage extends StatelessWidget {
 
   Widget _buildMessageItem(DocumentSnapshot doc) {
     Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
-    return Text(data["message"]);
+
+    // if it is current user
+
+    bool isCurrentUser = data['senderID'] == _authService.getcurrentuser()!.uid;
+
+
+    // Allign messages to the right otherwise allign in to the left
+    var allignment = isCurrentUser? Alignment.centerRight : Alignment.centerLeft;
+
+
+    return Container
+      (
+        child: Column(
+          crossAxisAlignment:
+          isCurrentUser? CrossAxisAlignment.end : CrossAxisAlignment.start,
+        children: [
+          Text(data["message"]),
+        ],
+      ));
   }
 
   Widget _buildUserInput() {
-    return Row(
-      children: [
-        // text fiel should take most of the space
-        Expanded(
-            child: MyTextField(
-                hintText: "Type a Message",
-                obscureText: false,
-                controller: _messageController)
-        ),
-        IconButton(
-          icon: Icon(Icons.arrow_upward),
-          onPressed: SendMessages,
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 35.0),
+      child: Row(
+        children: [
+          // text fiel should take most of the space
+          Expanded(
+              child: MyTextField(
+                  hintText: "Type a Message",
+                  obscureText: false,
+                  controller: _messageController)
+          ),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.green,
+              shape: BoxShape.circle,
+            ),
+            margin: EdgeInsets.only(right: 25.0),
+            child: IconButton(
+              icon: Icon(Icons.arrow_upward),
+              color: Colors.white,
+              onPressed: SendMessages,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

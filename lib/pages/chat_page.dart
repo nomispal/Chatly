@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:drassistant/auth/auth_service.dart';
+import 'package:drassistant/components/chat_bubble.dart';
 import 'package:drassistant/components/my_textfield.dart';
 import 'package:drassistant/services/chat/chat_service.dart';
 import 'package:flutter/cupertino.dart';
@@ -90,7 +91,9 @@ class ChatPage extends StatelessWidget {
           crossAxisAlignment:
           isCurrentUser? CrossAxisAlignment.end : CrossAxisAlignment.start,
         children: [
-          Text(data["message"]),
+          ChatBubble(isCurrentUser: isCurrentUser ,
+          messgae: data["message"],
+          )
         ],
       ));
   }

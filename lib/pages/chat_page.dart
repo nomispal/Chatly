@@ -6,8 +6,6 @@ import 'package:drassistant/services/chat/chat_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../models/messages.dart';
-
 class ChatPage extends StatelessWidget {
   final String receiverEmail;
   final String receiverID;
@@ -37,7 +35,13 @@ class ChatPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(receiverEmail)),
+      appBar: AppBar(
+        centerTitle: true,
+          title: Text(receiverEmail,
+          style: TextStyle(
+            color: Colors.grey,
+          ),),
+      ),
       body: Column(
         children: [
           // dislay all messages

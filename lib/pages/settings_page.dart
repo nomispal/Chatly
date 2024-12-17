@@ -12,10 +12,22 @@ class SettingsPage extends StatelessWidget{
         title: Text(
           "Settings",
           style: TextStyle(
-            color: Colors.grey,
+            color: Theme.of(context).colorScheme.background,
           ),
         ),
+      ),
+      body: Row(
+        children: [
+           // dark mode
+          Text("Dark mode"),
 
+          // switch toggle
+
+          CupertinoSwitch(
+              value: true,
+              onChanged: (value){},
+          )
+        ],
       ),
     );
   }

@@ -15,10 +15,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.white,
+        backgroundColor:  Theme.of(context).colorScheme.background,
         elevation: 0,
         title: const Text("Home",
             style: TextStyle(color: Colors.grey),

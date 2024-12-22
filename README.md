@@ -30,6 +30,6 @@ Chatly is a sleek and lightweight chat application built with Flutter and Fireba
 ## Installation and Setup 📦
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/chatly.git
+   git clone https://github.com/nomispal/chatly.git
    cd chatly
 

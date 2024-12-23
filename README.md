@@ -1,6 +1,6 @@
 # Chatly - Minimal Chat App with Firebase
 
-Chatly is a sleek and lightweight chat application built with Flutter and Firebase. It provides a simple, real-time messaging experience with support for both **Dark Mode** and **Light Mode**, making it perfect for users who value simplicity and functionality.
+Chatly is a sleek and lightweight chat mobile app built with Flutter and Firebase. It provides a simple, real-time messaging experience with support for both **Dark Mode** and **Light Mode**, making it perfect for users who value simplicity and functionality.
 
 ---
 
